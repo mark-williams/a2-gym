@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Instructor } from './instructor';
 
 @Component({
     selector: 'instructor-list',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class InstructorListComponent { 
     instructors = [
-        'Simon Hall',
-        'Liz Jones',
-        'Joanne Wilkins',
-        'Paul Regan',
-        'Steph Harris'
+        new Instructor(1, 'Simon Hall'),
+        new Instructor(2, 'Liz Jones'),
+        new Instructor(3, 'Joanne Wilkins'),
+        new Instructor(4, 'Paul Regan'),
+        new Instructor(5, 'Steph Harris')
     ];
 }
