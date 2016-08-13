@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InstructorListComponent } from './instructors/instructor-list';
+import { InstructorListComponent } from './instructors/instructor-list.component';
 
 @Component({
     selector: 'my-app',

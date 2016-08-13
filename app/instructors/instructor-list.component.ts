@@ -3,7 +3,7 @@ import { Instructor } from './instructor';
 
 @Component({
     selector: 'instructor-list',
-    templateUrl: 'app/instructors/instructor-list.html'
+    templateUrl: 'app/instructors/instructor-list.component.html'
 })
 export class InstructorListComponent { 
     instructors = [
