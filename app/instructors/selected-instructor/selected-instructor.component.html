@@ -1,0 +1,4 @@
+<div *ngIf="instructor">
+    <h4>{{instructor.name}}</h4>
+    <div>Session cost: {{ instructor.sessionCost | currency:'GBP':true}}</div>
+</div>

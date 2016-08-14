@@ -3,7 +3,4 @@
 <instructor-list (changed)="onSelected($event)"></instructor-list>
 
 <h3>Instructor Detail</h3>
-<div *ngIf="selectedInstructor">
-    <h4>{{selectedInstructor.name}}</h4>
-    <div>Session cost: {{ selectedInstructor.sessionCost | currency:'GBP':true}}</div>
-</div>
+<selected-instructor [instructor]="selectedInstructor"></selected-instructor>
