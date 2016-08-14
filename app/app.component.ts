@@ -10,7 +10,7 @@ import { Instructor } from './instructors/instructor';
 export class AppComponent {
     selectedInstructor: Instructor = null;
 
-    onSelected = function(selected: Instructor) {
+    onSelected(selected: Instructor) {
         this.selectedInstructor = selected;
     }
 }

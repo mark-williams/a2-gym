@@ -7,7 +7,12 @@ import { Instructor } from './instructor';
 })
 export class InstructorListComponent {
     @Output() changed = new EventEmitter<Instructor>(); 
-    instructors = [
+
+    instructors: Instructor[];
+    selectedInstructor: Instructor = null;
+
+    constructor() {
+        this.instructors = [
         new Instructor(1, 'Simon Hall', 30),
         new Instructor(2, 'Liz Jones', 30),
         new Instructor(3, 'Joanne Wilkins', 25),
@@ -15,9 +20,9 @@ export class InstructorListComponent {
         new Instructor(5, 'Steph Harris', 27.50)
     ];
 
-    selectedInstructor: Instructor = null;
-
-    select = function(instructor: Instructor) {
+    }
+        
+    select(instructor: Instructor) {
         this.selectedInstructor = instructor;
         this.changed.emit(instructor);
     }
