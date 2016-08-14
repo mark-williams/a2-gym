@@ -1,10 +1,2 @@
-<h1>Gym Sessions Manager</h1>
-<h2>Instructors</h2>
-<instructor-list (changed)="onSelected($event)"></instructor-list>
-
-<h3>Instructor Detail</h3>
-<div *ngIf="selectedInstructor">
-    <h4>{{selectedInstructor.name}}</h4>
-    <div>Session cost: {{ selectedInstructor.sessionCost | currency:'GBP':true}}</div>
-</div>
+<dashboard></dashboard>
 
