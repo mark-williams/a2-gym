@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { InstructorListComponent } from './instructors/instructor-list.component';
-import { Instructor } from './instructors/instructor';
+import { InstructorListComponent } from './instructors/instructor-list/instructor-list.component';
+import { Instructor } from './instructors/shared/instructor.model';
 
 @Component({
     selector: 'my-app',

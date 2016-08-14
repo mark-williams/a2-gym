@@ -1,9 +1,9 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Instructor } from './instructor';
+import { Instructor } from '../shared/instructor.model';
 
 @Component({
     selector: 'instructor-list',
-    templateUrl: 'app/instructors/instructor-list.component.html'
+    templateUrl: 'app/instructors/instructor-list/instructor-list.component.html'
 })
 export class InstructorListComponent {
     @Output() changed = new EventEmitter<Instructor>(); 
