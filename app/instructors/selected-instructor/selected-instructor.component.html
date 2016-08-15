@@ -1,4 +1,9 @@
-<div *ngIf="instructor">
-    <h4>{{instructor.name}}</h4>
-    <div>Session cost: {{ instructor.sessionCost | currency:'GBP':true}}</div>
+<div class="mdl-grid">
+    <h4 class="mdl-cell mdl-cell--8-col">Instructor Details</h4>
+    <div class="mdl-cell mdl-cell--8-col">
+        <div *ngIf="instructor">
+            <h4>{{instructor.name}}</h4>
+            <div>Session cost: {{ instructor.sessionCost | currency:'GBP':true}}</div>
+        </div>
+    </div>
 </div>

@@ -1,6 +1,12 @@
-<h1>Gym Sessions Manager</h1>
-<h2>Instructors</h2>
-<instructor-list (changed)="onSelected($event)"></instructor-list>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+        <instructor-list (changed)="onSelected($event)"></instructor-list>
+    </div>
 
-<h3>Instructor Detail</h3>
-<selected-instructor [instructor]="selectedInstructor"></selected-instructor>
+    <div class="mdl-cell mdl-cell--5-col mdl-card mdl-shadow--2dp">
+        <selected-instructor [instructor]="selectedInstructor"></selected-instructor>
+    </div>
+</div>
+
+
+

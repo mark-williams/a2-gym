@@ -1,5 +1,19 @@
-<ul>
-    <li *ngFor="let instructor of instructors" (click)="select(instructor)">
-        {{ instructor.name }}
-    </li>
-</ul>
+<div class="mdl-grid">
+   
+        <h2 class="mdl-cell mdl-cell--12-col">Instructors</h2>
+        <div class="instructor-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--2-col" *ngFor="let instructor of instructors">
+            <div class="mdl-card__title mdl-card--expand">
+                <h4>
+                    {{ instructor.name }}
+                </h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Session cost: {{ instructor.sessionCost | currency:'GBP':true }}<br> Free slots: 4
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a (click)="select(instructor)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Details</a>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </div>
+</div>
+
