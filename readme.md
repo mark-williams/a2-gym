@@ -17,3 +17,6 @@ https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-08
 
 This will be a work in progress; folders will be split further as the project size increases.
 
+###15 Aug 2016
+Added some (very) rudimentary styling, using Material Design Lite. (Makes a change from using Bootstrap!)
+
