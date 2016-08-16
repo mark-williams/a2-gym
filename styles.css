@@ -16,3 +16,15 @@
 .instructor-card > .mdl-card__actions > .mdl-button { 
     color: #fff;
 }
+
+.instructor-slots {
+    margin-top: 1em;
+}
+
+th.slots-time {
+    width: 180px;
+}
+
+th.slots-client {
+    width: 600px;
+}
