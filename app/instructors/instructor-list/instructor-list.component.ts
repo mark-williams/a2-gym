@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { InstructorService } from '../../shared/instructor.service';
 import { Instructor } from '../../shared/instructor.model';
 
@@ -6,7 +6,7 @@ import { Instructor } from '../../shared/instructor.model';
     selector: 'instructor-list',
     templateUrl: 'app/instructors/instructor-list/instructor-list.component.html'
 })
-export class InstructorListComponent {
+export class InstructorListComponent implements OnInit {
     @Output() changed = new EventEmitter<Instructor>(); 
 
     instructors: Instructor[];
@@ -14,9 +14,12 @@ export class InstructorListComponent {
     selectedInstructor: Instructor = null;
 
     constructor(private _instructorService: InstructorService) {
-        this.instructors = _instructorService.getInstructors();
     }
         
+    ngOnInit() {
+        this.instructors = this._instructorService.getInstructors();
+    }
+
     select(instructor: Instructor) {
         this.selectedInstructor = instructor;
         this.changed.emit(instructor);
