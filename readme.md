@@ -50,3 +50,5 @@ export class AppComponent {
 ~~~~
 
 As the *InstructorService* is concerned with instructor data I have moved the *Instructor* class to the same location.
+
+Refactored the *instructor-list* component so that its data retrieval is now performed outside of its constructor; to do this it now implements Aangular's *OnInit* interface.
