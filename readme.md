@@ -20,3 +20,33 @@ This will be a work in progress; folders will be split further as the project si
 ###15 Aug 2016
 Added some (very) rudimentary styling, using Material Design Lite. (Makes a change from using Bootstrap!)
 
+###17 Aug 2016
+Moed the acquisition of instructor data from within the *instructor-list* component into a dedicated service. This will allow data to be shared in the future. 
+
+The new service is injected into the *instructor-list* component by decorating it with *@Injectable()*:
+
+~~~~
+@Injectable()
+export class InstructorService {
+    instructors = [];
+
+    getInstructors() {
+        return this.instructors;
+    }
+}
+~~~~
+
+and marking it as a provider in the main containing component:
+
+~~~~
+@Component({
+    selector: 'my-app',
+    templateUrl: 'app/app.component.html',
+    directives: [HeaderComponent, DashboardComponent],
+    providers: [InstructorService]
+})
+export class AppComponent {
+}
+~~~~
+
+As the *InstructorService* is concerned with instructor data I have moved the *Instructor* class to the same location.
