@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter } from '@angular/core';
-import { Instructor } from '../shared/instructor.model';
+import { Instructor } from '../../shared/instructor.model';
 
 @Component({
     selector: 'selected-instructor',

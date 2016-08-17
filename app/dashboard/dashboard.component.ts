@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { InstructorListComponent } from '../instructors/instructor-list/instructor-list.component';
 import { SelectedInstructorComponent } from '../instructors/selected-instructor/selected-instructor.component';
-import { Instructor } from '../instructors/shared/instructor.model';
+import { Instructor } from '../shared/instructor.model';
 
 @Component({
     selector: 'dashboard',
