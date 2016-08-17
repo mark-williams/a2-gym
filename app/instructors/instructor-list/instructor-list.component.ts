@@ -13,7 +13,7 @@ export class InstructorListComponent {
     data: number[];
     selectedInstructor: Instructor = null;
 
-    constructor(_instructorService: InstructorService) {
+    constructor(private _instructorService: InstructorService) {
         this.instructors = _instructorService.getInstructors();
     }
         
