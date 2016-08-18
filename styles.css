@@ -28,3 +28,7 @@ th.slots-time {
 th.slots-client {
     width: 600px;
 }
+
+.error {
+    color: darkred;
+}

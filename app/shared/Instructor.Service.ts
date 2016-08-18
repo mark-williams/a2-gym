@@ -18,7 +18,6 @@ export class InstructorService {
     }
 
     private handleError(err: Response) {
-        console.log('API Error', err);
-        return Observable.throw(err.json().error || 'Server error');
+        return Observable.throw(err || 'Server error');
     }
 }
