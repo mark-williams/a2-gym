@@ -52,3 +52,13 @@ export class AppComponent {
 As the *InstructorService* is concerned with instructor data I have moved the *Instructor* class to the same location.
 
 Refactored the *instructor-list* component so that its data retrieval is now performed outside of its constructor; to do this it now implements Aangular's *OnInit* interface.
+
+###18 Aug 2016
+Added an http call to get instructor data. As no api currently exists this is merely a path to a json file contained in the *api* folder.
+
+N.B In order to use the *map* function on the Observable returned by *get* I had to include the following imports:
+
+~~~~
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+~~~~
