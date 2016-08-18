@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import { Instructor } from './instructor.model';
 
 
 @Injectable()
 export class InstructorService {
-    instructors = [
-            new Instructor(1, 'Simon Hall', 30),
-            new Instructor(2, 'Liz Jones', 30),
-            new Instructor(3, 'Jo Wilkins', 22),
-            new Instructor(4, 'Paul Regan', 22),
-            new Instructor(5, 'Steph Harris', 32.00)
-        ];
+      
+    constructor(private _http: Http) {}
 
     getInstructors() {
-        return this.instructors;
+        return this._http.get('api/instructors.json')
+                .map((response: Response) => <Instructor[]>response.json().data)
+                .catch(this.handleError);
+    }
+
+    private handleError(err: Response) {
+        console.log('API Error', err);
+        return Observable.throw(err.json().error || 'Server error');
     }
 }

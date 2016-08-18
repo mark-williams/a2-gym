@@ -17,7 +17,9 @@ export class InstructorListComponent implements OnInit {
     }
         
     ngOnInit() {
-        this.instructors = this._instructorService.getInstructors();
+        this._instructorService
+            .getInstructors()
+            .subscribe((instructors) => this.instructors = instructors);
     }
 
     select(instructor: Instructor) {
