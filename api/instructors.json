@@ -3,37 +3,163 @@
     {
       "id": 1,
       "name": "Simon Hall",
-      "sessionCost": "30.00"
+      "sessionCost": "30.00",
+      "sessions": [
+        { 
+          "time": "25 Aug 2016 10:00",
+          "client": "Sarah Davis"
+        },
+        { 
+          "time": "25 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "25 Aug 2016 13:00",
+          "client": ""
+        },
+        { 
+          "time": "25 Aug 2016 14:00",
+          "client": "Sally Taylor"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Liz Jones",
-      "sessionCost": "27.00"
+      "sessionCost": "27.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 10:00",
+          "client": "Mike Clark"
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": "Tony Spiller"
+        },
+        { 
+          "time": "25 Aug 2016 08:00",
+          "client": ""
+        },
+        { 
+          "time": "25 Aug 2016 09:00",
+          "client": ""
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Jo Watson",
-      "sessionCost": "27.00"
+      "sessionCost": "27.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 09:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 12:00",
+          "client": "John Hargreaves"
+        },
+        { 
+          "time": "24 Aug 2016 15:00",
+          "client": ""
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Paul Foster",
-      "sessionCost": "25.00"
+      "sessionCost": "25.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 10:00",
+          "client": "Ian Jones"
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 16:00",
+          "client": "Julie Hill"
+        },
+        { 
+          "time": "24 Aug 2016 17:00",
+          "client": "Geoff Lee"
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Steph Harris",
-      "sessionCost": "30.00"
+      "sessionCost": "30.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 10:00",
+          "client": "Rachael Brooks"
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 16:00",
+          "client": "David Hill"
+        },
+        { 
+          "time": "24 Aug 2016 17:00",
+          "client": "Paul Macintyre"
+        }
+      ]
     },
     {
       "id": 6,
       "name": "Phil Hall",
-      "sessionCost": "27.00"
+      "sessionCost": "27.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 09:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 12:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 15:00",
+          "client": ""
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Jane Foster",
-      "sessionCost": "30.00"
+      "sessionCost": "30.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 09:00",
+          "client": "Lorraine Wilkins"
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 12:00",
+          "client": "Mike Royle"
+        },
+        { 
+          "time": "24 Aug 2016 15:00",
+          "client": "Pete Burton"
+        }
+      ]
     }
   ]
 }

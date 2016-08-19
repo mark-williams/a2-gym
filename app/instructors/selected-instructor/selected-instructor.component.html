@@ -6,7 +6,10 @@
             <div>Session cost: {{ instructor.sessionCost | currency:'GBP':true}}</div>
 
             <h5>Sessions</h5>
-            <div class="instructor-slots">
+            <div *ngIf="!instructor.sessions">
+                 No session data
+            </div>
+            <div *ngIf="instructor.sessions" class="instructor-slots">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                     <thead>
                         <tr>
@@ -15,21 +18,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">3 Sep 10:00</td>
-                            <td class="mdl-data-table__cell--non-numeric">Penny Johnson</td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">3 Sep 15:00</td>
-                            <td class="mdl-data-table__cell--non-numeric"></td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">3 Sep 16:00</td>
-                            <td class="mdl-data-table__cell--non-numeric">Mike Lord</td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">6 Sep 08:00</td>
-                            <td class="mdl-data-table__cell--non-numeric"></td>
+                        <tr *ngFor="let session of instructor.sessions">
+                            <td class="mdl-data-table__cell--non-numeric">{{ session.time | date: "dd MMM HH:mm"}}</td>
+                            <td class="mdl-data-table__cell--non-numeric">{{ session.client }}</td>
                         </tr>
                     </tbody>
                 </table>
