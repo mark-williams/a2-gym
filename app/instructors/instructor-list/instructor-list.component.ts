@@ -4,11 +4,12 @@ import { InstructorService } from '../../shared/instructor.service';
 import { Instructor } from '../../shared/instructor.model';
 
 @Component({
+    moduleId: module.id,
     selector: 'instructor-list',
-    templateUrl: 'app/instructors/instructor-list/instructor-list.component.html'
+    templateUrl: 'instructor-list.component.html'
 })
 export class InstructorListComponent implements OnInit {
-    @Output() changed = new EventEmitter<Instructor>(); 
+    @Output() changed = new EventEmitter<Instructor>();
 
     instructors: Instructor[];
     selectedInstructor: Instructor = null;
@@ -16,7 +17,7 @@ export class InstructorListComponent implements OnInit {
 
     constructor(private _instructorService: InstructorService) {
     }
-        
+
     ngOnInit() {
         this._instructorService
             .getInstructors()
@@ -25,7 +26,7 @@ export class InstructorListComponent implements OnInit {
                 (error) => {
                     let resp = <Response>error;
                     this.errorMessage = resp.statusText;
-                } 
+                }
             );
     }
 

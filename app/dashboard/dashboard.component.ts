@@ -4,8 +4,9 @@ import { SelectedInstructorComponent } from '../instructors/selected-instructor/
 import { Instructor } from '../shared/instructor.model';
 
 @Component({
+    moduleId: module.id,
     selector: 'dashboard',
-    templateUrl: 'app/dashboard/dashboard.component.html',
+    templateUrl: 'dashboard.component.html',
     directives: [InstructorListComponent, SelectedInstructorComponent]
 })
 export class DashboardComponent {

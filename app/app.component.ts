@@ -5,8 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { InstructorService } from './shared/instructor.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
+    templateUrl: 'app.component.html',
     directives: [HeaderComponent, DashboardComponent],
     providers: [HTTP_PROVIDERS, InstructorService]
 })

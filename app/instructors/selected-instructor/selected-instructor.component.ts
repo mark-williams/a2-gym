@@ -1,9 +1,10 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Instructor } from '../../shared/instructor.model';
 
 @Component({
+    moduleId: module.id,
     selector: 'selected-instructor',
-    templateUrl: 'app/instructors/selected-instructor/selected-instructor.component.html'
+    templateUrl: 'selected-instructor.component.html'
 })
 export class SelectedInstructorComponent {
     @Input() instructor: Instructor;

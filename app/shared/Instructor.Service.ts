@@ -8,7 +8,7 @@ import { Instructor } from './instructor.model';
 
 @Injectable()
 export class InstructorService {
-      
+
     constructor(private _http: Http) {}
 
     getInstructors() {
