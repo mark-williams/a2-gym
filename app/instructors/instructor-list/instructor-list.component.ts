@@ -1,7 +1,6 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
-import { InstructorService } from '../../shared/instructor.service';
-import { Instructor } from '../../shared/instructor.model';
+import { Instructor, InstructorService } from '../../shared/index';
 
 @Component({
     moduleId: module.id,

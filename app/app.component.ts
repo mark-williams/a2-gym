@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
-import { HeaderComponent } from './layout/header.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { InstructorService } from './shared/instructor.service';
+
+import { HeaderComponent } from './layout/index';
+import { DashboardComponent } from './dashboard/index';
+import { InstructorService } from './shared/index';
 
 @Component({
     moduleId: module.id,
