@@ -72,3 +72,6 @@ Added ability to book and amend an instructor's session by entering/amending the
 Two-way binding can of course be problematic, especially in larger applications, where a flux pattern (such as *Redux*) is worthy of consideration, however I've used it here because: first, it's very local the the component and second, this is a sandbox application!
 
 Of course after updating the model we would have to decide when to save the data (e.g. using an api), maybe a *Save* button on the details section?
+
+###21 Aug 2016
+Added *moduleId* to component decorators - this allows for much simpler (relative) template paths (see https://angular.io/docs/ts/latest/cookbook/component-relative-paths.html)
