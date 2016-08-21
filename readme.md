@@ -62,3 +62,13 @@ N.B In order to use the *map* function on the Observable returned by *get* I had
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 ~~~~
+
+###18 Aug 2016
+Added ability to book and amend an instructor's session by entering/amending the client name. This uses two-way binding, using the 'banana-in-the-box' syntax in the view:
+~~~~
+<input [attr.id]="'session-id-' + index" type="text"  class="mdl-textfield__input" [(ngModel)]="session.client" />
+~~~~
+
+Two-way binding can of course be problematic, especially in larger applications, where a flux pattern (such as *Redux*) is worthy of consideration, however I've used it here because: first, it's very local the the component and second, this is a sandbox application!
+
+Of course after updating the model we would have to decide when to save the data (e.g. using an api), maybe a *Save* button on the details section?
