@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { InstructorListComponent } from '../instructors/instructor-list/index';
-import { SelectedInstructorComponent } from '../instructors/selected-instructor/index';
+import { InstructorListComponent, SelectedInstructorComponent } from '../instructors/index';
 import { Instructor } from '../shared/index';
 
 @Component({
