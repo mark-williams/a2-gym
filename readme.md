@@ -75,3 +75,5 @@ Of course after updating the model we would have to decide when to save the data
 
 ###21 Aug 2016
 Added *moduleId* to component decorators - this allows for much simpler (relative) template paths (see https://angular.io/docs/ts/latest/cookbook/component-relative-paths.html)
+
+Added barrels - these files consolidate exports for a folder containing several files/components, resulting in simpler import statements in the components using them. (Follows style guideline https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-10)
