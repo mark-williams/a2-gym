@@ -77,3 +77,36 @@ Of course after updating the model we would have to decide when to save the data
 Added *moduleId* to component decorators - this allows for much simpler (relative) template paths (see https://angular.io/docs/ts/latest/cookbook/component-relative-paths.html)
 
 Added barrels - these files consolidate exports for a folder containing several files/components, resulting in simpler import statements in the components using them. (Follows style guideline https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-10)
+
+###28 Aug 2016
+Added routing. Routes are defined in *routing.ts*; these are set using *RouterModule.forRoot*
+
+~~~~
+const appRoutes: Routes = [
+    { path: '', component: DashboardComponent },
+    { path: 'dash', component: DashboardComponent },
+    { path: 'instructors', component: InstructorMaintenanceListComponent },
+    { path: '**', component: DashboardComponent }
+];
+
+
+export const appRoutingProviders: any[] = [];
+export const routing: any = RouterModule.forRoot(appRoutes);
+~~~~
+
+and set n the *@NgModule* section when bootstrapping:
+
+~~~~
+@NgModule({
+  imports: [ BrowserModule, FormsModule, routing ],
+  declarations: [ AppComponent, DashboardComponent, InstructorMaintenanceListComponent ],
+  providers: [ appRoutingProviders ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+~~~~
+
+when a route is matched its component will be injected into the placeholder defined by 
+~~~~
+<router_outlet>
+~~~~
