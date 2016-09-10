@@ -160,6 +160,29 @@
           "client": "Pete Burton"
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Neil Stevens",
+      "sessionCost": "20.00",
+      "sessions": [
+        { 
+          "time": "24 Aug 2016 09:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 11:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 12:00",
+          "client": ""
+        },
+        { 
+          "time": "24 Aug 2016 14:00",
+          "client": "John Briggs"
+        }
+      ]
     }
   ]
 }
