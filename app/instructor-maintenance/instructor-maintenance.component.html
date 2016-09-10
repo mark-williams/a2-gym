@@ -1,9 +1,16 @@
 <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-        <h2>Instructors</h2>
+
+    <div class="mdl-cell mdl-cell--5-col mdl-card mdl-shadow--2dp">
+        <div>
+            <h2>Instructors</h2>
+        </div>
+
+        <div class="_mdl-cell _mdl-cell--5-col">
+            <div class="mdl-grid" *ngFor="let instructor of instructors">
+                <div class="mdl-cell mdl-cell--3-col">{{ instructor.name }}</div>
+                <div class="mdl-cell mdl-cell--1-col"><a href="">Edit</a></div>
+            </div>    
+        </div>
     </div>
 
-    <div class="mdl-cell mdl-cell--8-col" *ngFor="let instructor of instructors">
-        <div>{{ instructor.name }}</div>
-    </div>    
 </div>
