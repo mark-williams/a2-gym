@@ -1,1 +1,1 @@
-export * from './instructor-maintenance.component';
+export * from './instructor-maintenance-list.component';

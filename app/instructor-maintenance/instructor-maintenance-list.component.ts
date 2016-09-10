@@ -4,7 +4,7 @@ import { InstructorService, Instructor } from '../shared/index';
 @Component({
     moduleId: module.id,
     selector: 'instructor-maintenance-list',
-    templateUrl: 'instructor-maintenance.component.html'
+    templateUrl: 'instructor-maintenance-list.component.html'
 })
 export class InstructorMaintenanceListComponent implements OnInit {
 
