@@ -139,7 +139,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "Jane Foster",
       "sessionCost": "30.00",
       "sessions": [
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "Neil Stevens",
       "sessionCost": "20.00",
       "sessions": [

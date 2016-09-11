@@ -8,7 +8,9 @@
         <div class="_mdl-cell _mdl-cell--5-col">
             <div class="mdl-grid" *ngFor="let instructor of instructors">
                 <div class="mdl-cell mdl-cell--3-col">{{ instructor.name }}</div>
-                <div class="mdl-cell mdl-cell--1-col"><a href="">Edit</a></div>
+                <div class="mdl-cell mdl-cell--1-col">
+                    <a href="" [routerLink]="['/instructors', instructor.id]">Edit</a>
+                </div>
             </div>    
         </div>
     </div>
