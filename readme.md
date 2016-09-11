@@ -110,3 +110,6 @@ when a route is matched its component will be injected into the placeholder defi
 ~~~~
 <router_outlet>
 ~~~~
+
+###11 Sep 2016
+Added routing so that a user can navigate to an individual instructor for maintenance.  
