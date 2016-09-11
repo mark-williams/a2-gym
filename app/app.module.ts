@@ -5,11 +5,11 @@ import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent }  from './app.component';
 import { DashboardComponent } from './dashboard/index';
-import { InstructorMaintenanceListComponent } from './instructor-maintenance/index';
+import { InstructorMaintenanceListComponent, InstructorMaintenanceComponent } from './instructor-maintenance/index';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, routing ],
-  declarations: [ AppComponent, DashboardComponent, InstructorMaintenanceListComponent ],
+  declarations: [ AppComponent, DashboardComponent, InstructorMaintenanceListComponent, InstructorMaintenanceComponent ],
   providers: [ appRoutingProviders ],
   bootstrap: [ AppComponent ]
 })
