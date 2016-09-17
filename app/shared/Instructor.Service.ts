@@ -9,14 +9,14 @@ import { Instructor } from './instructor.model';
 @Injectable()
 export class InstructorService {
 
-    private apiUrl = 'app/instructors'; // 'api/instructors.json'
+    private apiUrl = 'app/instructors';
 
     constructor(private _http: Http) {}
 
     getInstructors() {
         return this._http.get(this.apiUrl)
-                .map((response: Response) => <Instructor[]>response.json().data)
-                .catch(this.handleError);
+            .map((response: Response) => <Instructor[]>response.json().data)
+            .catch(this.handleError);
     }
 
     private handleError(err: Response) {

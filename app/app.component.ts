@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './layout/index';
@@ -15,6 +14,3 @@ import { InstructorService } from './shared/index';
 })
 export class AppComponent {
 }
-
-//    providers: [HTTP_PROVIDERS, InstructorService]
-
