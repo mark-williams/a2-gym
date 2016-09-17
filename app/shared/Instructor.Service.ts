@@ -9,10 +9,12 @@ import { Instructor } from './instructor.model';
 @Injectable()
 export class InstructorService {
 
+    private apiUrl = 'app/instructors'; // 'api/instructors.json'
+
     constructor(private _http: Http) {}
 
     getInstructors() {
-        return this._http.get('api/instructors.json')
+        return this._http.get(this.apiUrl)
                 .map((response: Response) => <Instructor[]>response.json().data)
                 .catch(this.handleError);
     }

@@ -11,7 +11,10 @@ import { InstructorService } from './shared/index';
     selector: 'my-app',
     templateUrl: 'app.component.html',
     directives: [HeaderComponent, DashboardComponent, RouterOutlet],
-    providers: [HTTP_PROVIDERS, InstructorService]
+    providers: [InstructorService]
 })
 export class AppComponent {
 }
+
+//    providers: [HTTP_PROVIDERS, InstructorService]
+
