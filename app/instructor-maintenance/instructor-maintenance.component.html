@@ -2,12 +2,16 @@
     <div *ngIf="instructor" class="mdl-cell mdl-cell--8-col">
         <h2><em>Editing</em> {{ instructor.name }}</h2>
         <h4 class="error mdl-cell mdl-cell--12-col">{{ errorMessage }}</h4>
-        <div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label for="name">Name</label>
-            <input id="name" type="text" [(ngModel)]="instructorUnderEdit.name" />
+            <input class="mdl-textfield__input" id="name" type="text" [(ngModel)]="instructorUnderEdit.name" />
         </div>
         <div>
-            <button (click)="save(instructorUnderEdit)">Save</button>
+            <button 
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                (click)="save(instructorUnderEdit)">
+                Save
+            </button>
         </div>
     </div>
 </div>

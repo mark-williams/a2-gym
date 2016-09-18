@@ -5,6 +5,8 @@ import { HeaderComponent } from './layout/index';
 import { DashboardComponent } from './dashboard/index';
 import { InstructorService } from './shared/index';
 
+declare var componentHandler: any;
+
 @Component({
     moduleId: module.id,
     selector: 'my-app',
@@ -12,5 +14,4 @@ import { InstructorService } from './shared/index';
     directives: [HeaderComponent, DashboardComponent, RouterOutlet],
     providers: [InstructorService]
 })
-export class AppComponent {
-}
+export class AppComponent {}

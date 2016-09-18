@@ -32,3 +32,8 @@ th.slots-client {
 .error {
     color: darkred;
 }
+
+label {
+    font-size: 0.8em;
+    color: rgb(63,81,181);
+}
