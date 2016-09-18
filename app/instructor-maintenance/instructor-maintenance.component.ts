@@ -10,7 +10,9 @@ import { Instructor, InstructorService } from '../shared/index';
 })
 export class InstructorMaintenanceComponent implements OnInit {
 
-    instructor: any;
+    instructor: Instructor;
+    instructorUnderEdit: Instructor;
+    errorMessage: string = '';
 
     constructor(private _route: ActivatedRoute, private _service: InstructorService) { }
 
@@ -21,11 +23,27 @@ export class InstructorMaintenanceComponent implements OnInit {
             .getInstructors()
             .subscribe(
                 (results) => {
-                    this.instructor = results.find((i: Instructor) => { return i.id === id; });
+                    let instructor = results.find((i: Instructor) => { return i.id === id; });
+                    this.instructor = instructor;
+                    this.setEditDetails(instructor);
                 },
                 error => {
                     console.log('ERROR', error);
                 }
             );
+    }
+
+    save(edited: Instructor) {
+        console.log(`Saving: ${edited.name}`);
+        this._service.saveInstructor(edited)
+            .then((result) => {
+                this.instructor = result;
+                this.setEditDetails(result);
+            })
+            .catch((err) => this.errorMessage = err);
+    }
+
+    private setEditDetails(instructor: Instructor): void {
+        this.instructorUnderEdit = Object.assign({}, instructor);
     }
 }

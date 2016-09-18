@@ -1,3 +1,13 @@
-<div *ngIf="instructor" class="mdl-card">
-    <h2>{{ instructor.name }}</h2>
+<div class="mdl-grid">
+    <div *ngIf="instructor" class="mdl-cell mdl-cell--8-col">
+        <h2><em>Editing</em> {{ instructor.name }}</h2>
+        <h4 class="error mdl-cell mdl-cell--12-col">{{ errorMessage }}</h4>
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" [(ngModel)]="instructorUnderEdit.name" />
+        </div>
+        <div>
+            <button (click)="save(instructorUnderEdit)">Save</button>
+        </div>
+    </div>
 </div>
