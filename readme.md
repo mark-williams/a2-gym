@@ -116,3 +116,6 @@ Added routing so that a user can navigate to an individual instructor for mainte
 
 ###17 Sep 2016
 Added in-memory API - this will replace the 'api' that just return the contents of a json file. It will allow us to POST data so that we can create a maintenance form. 
+
+###18 Sep 2016
+Now support editing of the instructor name (well, it's a start!) via the api.
