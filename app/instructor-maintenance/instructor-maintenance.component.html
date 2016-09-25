@@ -5,7 +5,7 @@
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label for="name">Name</label>
             <input class="mdl-textfield__input" id="name" name="name" type="text" [(ngModel)]="instructorUnderEdit.name"  #name="ngModel" required />
-            <div [hidden]="name.valid || name.pristine">
+            <div [hidden]="name.valid || name.pristine" class="error">
                 Please enter a name
             </div>
         </div>
