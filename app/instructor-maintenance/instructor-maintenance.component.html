@@ -4,11 +4,15 @@
         <h4 class="error mdl-cell mdl-cell--12-col">{{ errorMessage }}</h4>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label for="name">Name</label>
-            <input class="mdl-textfield__input" id="name" type="text" [(ngModel)]="instructorUnderEdit.name" />
+            <input class="mdl-textfield__input" id="name" name="name" type="text" [(ngModel)]="instructorUnderEdit.name"  #name="ngModel" required />
+            <div [hidden]="name.valid || name.pristine">
+                Please enter a name
+            </div>
         </div>
         <div>
             <button 
                 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                [disabled]="name.valid === false"
                 (click)="save(instructorUnderEdit)">
                 Save
             </button>
