@@ -119,3 +119,6 @@ Added in-memory API - this will replace the 'api' that just return the contents 
 
 ###18 Sep 2016
 Now support editing of the instructor name (well, it's a start!) via the api. Will need to add validation to the form.
+
+###25 Sep 2016
+Added rudimentary validation to instructor maintenance form - uses Angular's template driven validation.
